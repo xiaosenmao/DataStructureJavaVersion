@@ -26,7 +26,7 @@ public class QueuesComparison {
         int opCount = 100000;
 
         ArrayQueue<Integer> arrayQueue = new ArrayQueue<>();
-        double time1 = testQueue(arrayQueue, opCount);
+        double time1 = testQueue(arrayQueue, opCount);  // O(n^2)
         System.out.println("ArrayQueue, time1: " + time1 + " S");
 
         LoopQueue<Integer> loopQueue = new LoopQueue<>();

@@ -1,5 +1,5 @@
-// 使用链表的尾部（添加节点容易，删除节点困难） 作为队列的尾部
-// 使用链表的头部（添加，删除节点 都容易） 作为队列的头部
+// Use the tail of the linked list (easy to add nodes, difficult to delete nodes) as the tail of the queue.
+// Use the head of the linked list (it is easy to add and delete nodes) as the head of the queue.
 
 public class LinkedListQueue<E> implements Queue<E> {
 
