@@ -32,5 +32,16 @@ public class QueuesComparison {
         LoopQueue<Integer> loopQueue = new LoopQueue<>();
         double time2 = testQueue(loopQueue, opCount);
         System.out.println("LoopQueue, time2: " + time2 + " S");
+
+        LinkedListQueue<Integer> linedListQueue = new LinkedListQueue<>();
+        double time3 = testQueue(linedListQueue, opCount);
+        System.out.println("linedListQueue, time3: " + time3 + " S");
+
+        /*
+            Result on my device:
+            ArrayQueue, time1: 3.58870863 S
+            LoopQueue, time2: 0.009388672 S
+            linedListQueue, time3: 0.007742912 S
+         */
     }
 }
