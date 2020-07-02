@@ -11,7 +11,7 @@ public class MaxHeap<E extends Comparable<E>> {
     }
 
     // 将任意数组整理成堆的形状 heapify
-    public MaxHeap(E[] arr) {  // O(n)
+    public MaxHeap(E[] arr) {// 将任意数组整理成堆的形状 heapify
 
         data = new Array<>(arr);
 
@@ -68,7 +68,7 @@ public class MaxHeap<E extends Comparable<E>> {
         return data.get(0);
     }
 
-    // 向堆中取出元素 （下沉）
+    // 从堆中取出元素 （下沉）
     public E extractMax() {  // O(logn)
 
         E ret = findMax();
@@ -129,7 +129,7 @@ i:    0   1   2   3   4   5   6   7   8   9
       62  41  30  28  16  22  13  19  17  15
 
 
-    parent (i - 1) = i/2  (整除)
+    parent (i) = (i - 1) / 2  (整除)
 
     leftChild (i)  =  2*i + 1
     rightChild (i) =  2*i + 2
