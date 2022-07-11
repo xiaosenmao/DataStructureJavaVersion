@@ -29,9 +29,15 @@ public class Main {
 //
 //        bst.inOrder();
 //        System.out.println();
+
+        // bst.inOrderNR();
+        // System.out.println();
 //
-//        bst.postOrder();
-//        System.out.println();
+//       bst.postOrder();
+//       System.out.println();
+
+    //    bst.postOrderNR();
+    //    System.out.println();
 
 
 //        System.out.println(bst);
