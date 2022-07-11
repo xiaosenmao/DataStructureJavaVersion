@@ -183,23 +183,6 @@ public class BST<E extends Comparable<E>> {
         inOrder(node.right);
     }
 
-    // 二分搜索树的中序遍历,非递归，借助栈实现
-    public void inOrderNR() {
-        Stack<Node> stack = new Stack<>();
-        while (root != null || !stack.isEmpty()) {
-            while (root != null) {
-                stack.push(root);
-                root = root.left;
-            }
-
-            if (!stack.isEmpty()) {
-                Node cur = stack.pop();
-                System.out.println(cur.e);
-                root = cur.right;
-            }
-        }
-    }
-
     //  二分搜索树的后序遍历
     public void postOrder() {
         postOrder(root);
@@ -211,33 +194,10 @@ public class BST<E extends Comparable<E>> {
             return;
         }
 
-        postOrder(node.left);
         postOrder(node.right);
+        postOrder(node.left);
         // do stuff.
         System.out.println(node.e);
-    }
-
-    // 二分搜索树的后序遍历,非递归，借助栈实现
-    public void postOrderNR() {
-        Stack<Node> stack = new Stack<>();
-        Node cur = root;
-        Node pre = null;
-        while (cur != null || !stack.isEmpty()) {
-            while (cur != null) {
-                stack.push(cur);
-                cur = cur.left;
-            }
-            if (!stack.isEmpty()) {
-                Node top = stack.peek();
-                if (top.right == null || top.right == pre) {
-                    System.out.println(top.e);
-                    pre = top;
-                    stack.pop();
-                } else {
-                    cur = top.right;
-                }
-            }
-        }
     }
 
     // 二分搜索树的层序遍历（广度优先）
